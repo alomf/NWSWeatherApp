@@ -16,12 +16,11 @@ This is a **React TypeScript** application that fetches and displays active weat
 ```
 weather-alerts-app/
 │── src/
-│   ├── main.tsx          # Renders the WeatherAlerts component
+│   ├── main.tsx           # Renders the WeatherAlerts component
 │   ├── index.css          # Tailwind CSS styling
-│   ├── WeatherAlerts.tsx  # Main logic for fetching, displaying, and filtering alerts
+│   ├── App.tsx            # Main logic for fetching, displaying, and filtering alerts
 │── package.json           # Project dependencies & scripts
 │── tsconfig.json          # TypeScript configuration
-│── tailwind.config.js     # Tailwind CSS config
 │── vite.config.ts         # Vite configuration
 ```
 
@@ -29,7 +28,7 @@ weather-alerts-app/
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/yourusername/weather-alerts-app.git
+   git clone https://github.com/yourusername/NWSWeatherApp.git
    cd weather-alerts-app
    ```
 2. **Install dependencies**
