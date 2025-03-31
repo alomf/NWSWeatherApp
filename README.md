@@ -1,4 +1,4 @@
-# Weather Alerts App
+# NSW Weather Alerts App
 
 This is a **React TypeScript** application that fetches and displays active weather alerts from the **National Weather Service (NWS) API**. Users can **filter** and **sort** alerts while enjoying a clean, responsive UI built with **Tailwind CSS** and **Vite** for fast development.
 
