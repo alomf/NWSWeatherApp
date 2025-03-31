@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+# Weather Alerts App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **React TypeScript** application that fetches and displays active weather alerts from the **National Weather Service (NWS) API**. Users can **filter** and **sort** alerts while enjoying a clean, responsive UI built with **Tailwind CSS** and **Vite** for fast development.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📡 **Fetches real-time weather alerts** from the NWS API
+- 🔎 **Filter alerts** based on severity
+- 📊 **Sort alerts** by headline, severity, or location
+- 🎨 **Responsive design** using Tailwind CSS
+- ⚡ **Fast, efficient, and user-friendly UI**
+- 🚀 **Built with Vite** for a blazing-fast development experience
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+weather-alerts-app/
+│── src/
+│   ├── main.tsx          # Renders the WeatherAlerts component
+│   ├── index.css          # Tailwind CSS styling
+│   ├── WeatherAlerts.tsx  # Main logic for fetching, displaying, and filtering alerts
+│── package.json           # Project dependencies & scripts
+│── tsconfig.json          # TypeScript configuration
+│── tailwind.config.js     # Tailwind CSS config
+│── vite.config.ts         # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Installation & Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/yourusername/weather-alerts-app.git
+   cd weather-alerts-app
+   ```
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
+3. **Start the application** (using Vite)
+   ```sh
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠 How It Works
+
+### 1️⃣ Fetching Weather Alerts
+
+- Uses `useEffect` to **fetch alerts when the component mounts**.
+- Handles **errors** in case of a network failure.
+- Formats API data into a **consistent structure**.
+
+### 2️⃣ Filtering & Sorting
+
+- **Filters alerts** based on **severity**.
+- **Sorts alerts dynamically** when column headers are clicked.
+
+### 3️⃣ User Interface (Tailwind CSS)
+
+- **Responsive table layout** for readability.
+- **Hover effects** on sortable columns.
+- **Colored severity levels** for better visibility.
+
+## 🏆 Why This Approach?
+
+- ✅ **Scalable & modular** architecture
+- ✅ **TypeScript ensures type safety**
+- ✅ **Optimized filtering & sorting logic** for **fast performance**
+- ✅ **Clean, modern UI** using Tailwind CSS
+- ✅ **Vite provides instant Hot Module Replacement (HMR) for better development**
+
+## 📌 Future Improvements
+
+- 🔹 **Add Pagination** for large datasets
+- 🔹 **Enhance Search Filtering** to allow searching by location
+- 🔹 **Improve UI with Animations** (e.g., hover effects, loading spinners)
+
+## 📜 License
+
+This project is **open-source** under the MIT License.
+
+---
+
+Enjoy real-time weather alerts with a smooth and modern interface! 🌦️🚀
